@@ -1,0 +1,171 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (memory/allocation.inline.hpp:61), pid=49424, tid=51260
+#
+# JRE version:  (8.0_45-b15) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.45-b02 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000002670800):  JavaThread "Unknown thread" [_thread_in_vm, id=51260, stack(0x0000000002500000,0x0000000002600000)]
+
+Stack: [0x0000000002500000,0x0000000002600000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x32b57a]
+V  [jvm.dll+0x279873]
+V  [jvm.dll+0x27a509]
+V  [jvm.dll+0x271825]
+V  [jvm.dll+0x1606]
+V  [jvm.dll+0x3f7fb2]
+V  [jvm.dll+0x3f898f]
+V  [jvm.dll+0x3f8a5d]
+V  [jvm.dll+0x3f8c26]
+V  [jvm.dll+0xf2cf2]
+V  [jvm.dll+0x20f0c9]
+V  [jvm.dll+0x240e0a]
+V  [jvm.dll+0x15ba41]
+C  [javaw.exe+0x217e]
+C  [javaw.exe+0xcd17]
+C  [javaw.exe+0xcdab]
+C  [KERNEL32.DLL+0x17bd4]
+C  [ntdll.dll+0x6ced1]
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x0000000002670800 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=51260, stack(0x0000000002500000,0x0000000002600000)]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 38400K, used 665K [0x00000000d5f80000, 0x00000000d8a00000, 0x0000000100000000)
+  eden space 33280K, 2% used [0x00000000d5f80000,0x00000000d6026670,0x00000000d8000000)
+  from space 5120K, 0% used [0x00000000d8500000,0x00000000d8500000,0x00000000d8a00000)
+  to   space 5120K, 0% used [0x00000000d8000000,0x00000000d8000000,0x00000000d8500000)
+ ParOldGen       total 87552K, used 0K [0x0000000081e00000, 0x0000000087380000, 0x00000000d5f80000)
+  object space 87552K, 0% used [0x0000000081e00000,0x0000000081e00000,0x0000000087380000)
+ Metaspace       used 742K, capacity 4480K, committed 4480K, reserved 1056768K
+  class space    used 75K, capacity 384K, committed 384K, reserved 1048576K
+
+Card table byte_map: [0x0000000011b30000,0x0000000011f30000] byte_map_base: 0x0000000011721000
+
+Marking Bits: (ParMarkBitMap*) 0x0000000057494040
+ Begin Bits: [0x00000000129e0000, 0x0000000014968000)
+ End Bits:   [0x0000000014968000, 0x00000000168f0000)
+
+Polling page: 0x0000000000400000
+
+CodeCache: size=245760Kb used=328Kb max_used=328Kb free=245431Kb
+ bounds [0x0000000002770000, 0x00000000029e0000, 0x0000000011770000]
+ total_blobs=57 nmethods=0 adapters=37
+ compilation: enabled
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (10 events):
+Event: 0.024 loading class java/lang/Short
+Event: 0.024 loading class java/lang/Short done
+Event: 0.024 loading class java/lang/Integer
+Event: 0.024 loading class java/lang/Integer done
+Event: 0.024 loading class java/lang/Long
+Event: 0.024 loading class java/lang/Long done
+Event: 0.024 loading class java/lang/NullPointerException
+Event: 0.024 loading class java/lang/NullPointerException done
+Event: 0.024 loading class java/lang/ArithmeticException
+Event: 0.024 loading class java/lang/ArithmeticException done
+
+
+Dynamic libraries:
+0x00007ff74e520000 - 0x00007ff74e557000 	E:\java\jre1.8.0_45\bin\javaw.exe
+0x00007ffa2c920000 - 0x00007ffa2cb10000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffa2b500000 - 0x00007ffa2b5b2000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffa29c50000 - 0x00007ffa29ef3000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffa2bce0000 - 0x00007ffa2bd83000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffa2bc40000 - 0x00007ffa2bcde000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffa2c600000 - 0x00007ffa2c697000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffa2bf40000 - 0x00007ffa2c060000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffa2b0c0000 - 0x00007ffa2b254000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffa29b80000 - 0x00007ffa29ba1000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffa2c6a0000 - 0x00007ffa2c6c6000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffa29f80000 - 0x00007ffa2a114000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffa29bb0000 - 0x00007ffa29c4e000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffa29930000 - 0x00007ffa29a2a000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffa0ed90000 - 0x00007ffa0f015000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.18362.418_none_e6c6b287130d565d\COMCTL32.dll
+0x00007ffa2c060000 - 0x00007ffa2c396000 	C:\WINDOWS\System32\combase.dll
+0x00007ffa298b0000 - 0x00007ffa29930000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffa2b5c0000 - 0x00007ffa2b5ee000 	C:\WINDOWS\System32\IMM32.DLL
+0x00000000569f0000 - 0x0000000056ac2000 	E:\java\jre1.8.0_45\bin\msvcr100.dll
+0x0000000056c90000 - 0x0000000057513000 	E:\java\jre1.8.0_45\bin\server\jvm.dll
+0x00007ffa2b5f0000 - 0x00007ffa2b5f8000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffa26c00000 - 0x00007ffa26c24000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffa12550000 - 0x00007ffa12559000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffa22050000 - 0x00007ffa2205a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffa2bed0000 - 0x00007ffa2bf3f000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffa26bd0000 - 0x00007ffa26bfd000 	C:\WINDOWS\SYSTEM32\winmmbase.dll
+0x00007ffa2a8a0000 - 0x00007ffa2a8ea000 	C:\WINDOWS\System32\cfgmgr32.dll
+0x0000000056ba0000 - 0x0000000056baf000 	E:\java\jre1.8.0_45\bin\verify.dll
+0x0000000056b70000 - 0x0000000056b99000 	E:\java\jre1.8.0_45\bin\java.dll
+0x0000000056b50000 - 0x0000000056b66000 	E:\java\jre1.8.0_45\bin\zip.dll
+0x00007ffa28130000 - 0x00007ffa28324000 	C:\WINDOWS\SYSTEM32\dbghelp.dll
+
+VM Arguments:
+jvm_args: -Dfile.encoding=GBK 
+java_command: application.calculationExcerciseApplication
+java_class_path (initial): E:\java\newsource\Lab1-exercise\bin
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=E:\java\jdk1.8.0_45
+PATH=E:/java/jre1.8.0_45/bin/server;E:/java/jre1.8.0_45/bin;E:/java/jre1.8.0_45/lib/amd64;C:\ProgramData\Oracle\Java\javapath;E:\java\jdk1.8.0_45\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;E:\Git\cmd;E:\Redis\;C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\Scripts\;C:\Users\Lenovo\AppData\Local\Programs\Python\Python38\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Lenovo\AppData\Local\Microsoft\WindowsApps;;E:\IntelliJ IDEA 2019.3.5\bin;;E:\Microsoft VS Code\bin;E:\java\eclipse;
+USERNAME=Lenovo
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 158 Stepping 10, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 18362 (10.0.18362.329)
+
+CPU:total 8 (4 cores per cpu, 2 threads per core) family 6 model 158 stepping 10, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx
+
+Memory: 4k page, physical 8259892k(1930000k free), swap 22414896k(6344k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.45-b02) for windows-amd64 JRE (1.8.0_45-b15), built on Apr 30 2015 12:40:44 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Wed Oct 21 19:21:32 2020
+elapsed time: 0 seconds (0d 0h 0m 0s)
+
