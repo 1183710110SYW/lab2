@@ -10,7 +10,7 @@ public class createNumber {
 		int randomNumberTwo = (int)(Math.random()*100 + 1);
 		int randomFlag = (int)(Math.random()*100 + 1);
 		if(randomFlag % 2 == 0) {
-			//偶数代表加法，奇数代表减法
+			//偶数代表加法
 			while(randomNumberOne + randomNumberTwo > 100) {
 				randomNumberOne = (int)(Math.random()*100 + 1);
 				randomNumberTwo = (int)(Math.random()*100 + 1);
